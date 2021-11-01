@@ -7,16 +7,18 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import LoginScreen from "./screens/Login.js";
 import OnboardingScreen from "./screens/Onboarding.js";
+import SignUp from "./screens/SignUp.js";
 const AppStack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <AppStack.Navigator>
+      <AppStack.Navigator headerMode="none">
         <AppStack.Screen
           name="Onboarding"
           component={OnboardingScreen}
         ></AppStack.Screen>
         <AppStack.Screen name="Login" component={LoginScreen}></AppStack.Screen>
+        <AppStack.Screen name="SignUp" component={SignUp}></AppStack.Screen>
       </AppStack.Navigator>
     </NavigationContainer>
   );
