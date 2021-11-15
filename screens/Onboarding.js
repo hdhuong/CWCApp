@@ -15,7 +15,7 @@ const OnboardingScreen = ({ navigation }) => {
               style={styles.imageOnboard}
             />
           ),
-          title: "Car Connect",
+          title: "Cars Connect",
           subtitle: "Ứng dụng kết nối thông tin xe nhanh nhất ",
         },
         {
@@ -37,7 +37,7 @@ const OnboardingScreen = ({ navigation }) => {
               style={styles.imageOnboard}
             />
           ),
-          title: "Car Community",
+          title: "Cars Community",
           subtitle: "Cộng đồng dành cho những tài xế ",
         },
       ]}
