@@ -1,0 +1,24 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["react-app"],
+  "plugins": ["babel", "jsx-a11y", "jsdoc"],
+  "rules": {
+    "max-len": [
+      "error",
+      {
+        "code": 240,
+        "tabWidth": 2
+      }
+    ],
+    "no-invalid-this": 0,
+    "babel/no-invalid-this": 1,
+    "require-jsdoc": 0,
+    "camelcase": [0, { "properties": 0 }],
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["@material-ui/*/*/*", "!@material-ui/core/test-utils/*"]
+      }
+    ]
+  }
+}

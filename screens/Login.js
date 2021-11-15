@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext } from 'react';
 
 import {
   View,
@@ -10,18 +10,18 @@ import {
   ScrollView,
   Dimensions,
   TextInput,
-} from "react-native";
-import * as Animatable from "react-native-animatable";
-import { LinearGradient } from "expo-linear-gradient";
-import FontAwesome from "react-native-vector-icons/FontAwesome";
-import Feather from "react-native-vector-icons/Feather";
-import FormInput from "../components/FormInput";
-import FormButton from "../components/FormButton";
+} from 'react-native';
+import * as Animatable from 'react-native-animatable';
+import { LinearGradient } from 'expo-linear-gradient';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import Feather from 'react-native-vector-icons/Feather';
+import FormInput from '../components/FormInput';
+import FormButton from '../components/FormButton';
 const LoginScreen = ({ navigation }) => {
   const [data, setData] = React.useState({
-    lisencePlate: "",
-    password: "",
-    confirm_password: "",
+    lisencePlate: '',
+    password: '',
+    confirm_password: '',
     check_textInputChange: false,
     secureTextEntry: true,
     confirm_secureTextEntry: true,
@@ -79,7 +79,7 @@ const LoginScreen = ({ navigation }) => {
       <Animatable.View style={styles.footer} animation="fadeInUpBig">
         <View style={styles.logoView}>
           <Image
-            source={require("../assets/images/vehicle.png")}
+            source={require('../assets/images/vehicle.png')}
             style={styles.logo}
           />
         </View>
@@ -117,7 +117,7 @@ const LoginScreen = ({ navigation }) => {
           </TouchableOpacity>
         </View>
         <TouchableOpacity>
-          <Text style={{ color: "#009387", marginTop: 15 }}>
+          <Text style={{ color: '#009387', marginTop: 15 }}>
             Quên mật khẩu?
           </Text>
         </TouchableOpacity>
@@ -129,14 +129,14 @@ const LoginScreen = ({ navigation }) => {
             }}
           >
             <LinearGradient
-              colors={["#08d4c4", "#01ab9d"]}
+              colors={['#08d4c4', '#01ab9d']}
               style={styles.signIn}
             >
               <Text
                 style={[
                   styles.textSign,
                   {
-                    color: "#fff",
+                    color: '#fff',
                   },
                 ]}
               >
@@ -147,10 +147,10 @@ const LoginScreen = ({ navigation }) => {
 
           <TouchableOpacity
             style={styles.forgotButton}
-            onPress={() => navigation.navigate("SignUp")}
+            onPress={() => navigation.navigate('SignUp')}
           >
             <Text>
-              Bạn chưa có tài khoản ?{" "}
+              Bạn chưa có tài khoản ?{' '}
               <Text style={styles.navButtonText}>Đăng ký</Text>
             </Text>
           </TouchableOpacity>
@@ -163,83 +163,83 @@ export default LoginScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#a6e4d0",
+    backgroundColor: '#a6e4d0',
   },
   logo: {
     height: 120,
     width: 120,
-    resizeMode: "cover",
+    resizeMode: 'cover',
   },
   logoView: {
-    display: "flex",
-    alignItems: "center",
+    display: 'flex',
+    alignItems: 'center',
     marginBottom: 20,
   },
   header: {
     flex: 1,
-    justifyContent: "flex-end",
+    justifyContent: 'flex-end',
     paddingHorizontal: 20,
     paddingBottom: 50,
   },
   footer: {
-    flex: Platform.OS === "ios" ? 3 : 5,
-    backgroundColor: "#fff",
+    flex: Platform.OS === 'ios' ? 3 : 5,
+    backgroundColor: '#fff',
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     paddingHorizontal: 20,
     paddingVertical: 30,
   },
   text_header: {
-    color: "#fff",
-    fontWeight: "bold",
+    color: '#fff',
+    fontWeight: 'bold',
     fontSize: 30,
   },
   text_footer: {
-    color: "#05375a",
+    color: '#05375a',
     fontSize: 18,
   },
   action: {
-    flexDirection: "row",
+    flexDirection: 'row',
     marginTop: 10,
     borderBottomWidth: 1,
-    borderBottomColor: "#f2f2f2",
+    borderBottomColor: '#f2f2f2',
     paddingBottom: 5,
   },
   textInput: {
     flex: 1,
-    marginTop: Platform.OS === "ios" ? 0 : -12,
+    marginTop: Platform.OS === 'ios' ? 0 : -12,
     paddingLeft: 10,
-    color: "#05375a",
+    color: '#05375a',
   },
   button: {
-    alignItems: "center",
+    alignItems: 'center',
     marginTop: 50,
   },
   signIn: {
-    width: "100%",
+    width: '100%',
     height: 50,
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 20,
   },
   textSign: {
     fontSize: 18,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   textPrivate: {
-    flexDirection: "row",
-    flexWrap: "wrap",
+    flexDirection: 'row',
+    flexWrap: 'wrap',
     marginTop: 20,
   },
   color_textPrivate: {
-    color: "grey",
+    color: 'grey',
   },
   forgotButton: {
     marginVertical: 35,
   },
   navButtonText: {
     fontSize: 14,
-    fontWeight: "500",
-    color: "#009387",
+    fontWeight: '500',
+    color: '#009387',
   },
 });
