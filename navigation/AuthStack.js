@@ -1,15 +1,19 @@
-import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import OnboardingScreen from "../screens/Onboarding";
-import LoginScreen from "../screens/Login";
-import SignUp from "../screens/SignUp";
+import OnboardingScreen from '../screens/Onboarding';
+import LoginScreen from '../screens/Login';
+import SignUp from '../screens/SignUp';
 
 const AuthStack = createStackNavigator();
 
 const AuthStackScreen = ({ navigation }) => {
   return (
-    <AuthStack.Navigator headerMode="none">
+    <AuthStack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <AuthStack.Screen
         name="Onboarding"
         component={OnboardingScreen}
