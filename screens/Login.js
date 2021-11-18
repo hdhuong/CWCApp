@@ -17,9 +17,10 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 import FormInput from '../components/FormInput';
 import FormButton from '../components/FormButton';
+import { auth } from '../firebase/config';
 const LoginScreen = ({ navigation }) => {
   const [data, setData] = React.useState({
-    lisencePlate: '',
+    email: '',
     password: '',
     confirm_password: '',
     check_textInputChange: false,
@@ -31,13 +32,13 @@ const LoginScreen = ({ navigation }) => {
     if (val.length !== 0) {
       setData({
         ...data,
-        lisencePlate: val,
+        email: val,
         check_textInputChange: true,
       });
     } else {
       setData({
         ...data,
-        lisencePlate: val,
+        email: val,
         check_textInputChange: false,
       });
     }
@@ -83,7 +84,7 @@ const LoginScreen = ({ navigation }) => {
             style={styles.logo}
           />
         </View>
-        <Text style={styles.text_footer}>Biển số xe</Text>
+        <Text style={styles.text_footer}>Email</Text>
         <View style={styles.action}>
           <FontAwesome name="calendar-minus-o" size={20} color="#05375a" />
           <TextInput
@@ -125,7 +126,7 @@ const LoginScreen = ({ navigation }) => {
           <TouchableOpacity
             style={styles.signIn}
             onPress={() => {
-              loginHandle(data.lisencePlate, data.password);
+              loginHandle(data.email, data.password);
             }}
           >
             <LinearGradient
